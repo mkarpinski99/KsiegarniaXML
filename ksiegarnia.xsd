@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:simpleType name="tytulType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="autorType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="(\p{L}+\s)*\p{L}+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="data_wydaniaType">
+        <xsd:restriction base="xsd:date"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="stronyType">
+        <xsd:restriction base="xsd:positiveInteger"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="wymiarType">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minExclusive value="0"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="opisType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="walutaType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="jednostkaType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="jezykAttributeType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="typType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="papierowa"/>
+            <xsd:enumeration value="ebook"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="okladkaType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="miękka"/>
+            <xsd:enumeration value="twarda"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="kategoriaAttributeType">
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="idType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="k\d+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="cenaNodeType">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:minInclusive value="0"/>
+            <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="cenaType">
+        <xsd:simpleContent>
+            <xsd:extension base="cenaNodeType">
+                <xsd:attribute name="waluta" type="walutaType" default="zł"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="kategoriaType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="skrot" type="kategoriaAttributeType" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="jezykType">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="skrot" type="jezykAttributeType" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="autorzyType">
+        <xsd:sequence>
+            <xsd:element name="autor" type="autorType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="wymiaryType">
+        <xsd:sequence>
+            <xsd:element name="dlugosc" type="wymiarType" minOccurs="0"/>
+            <xsd:element name="szerokosc" type="wymiarType" minOccurs="0"/>
+            <xsd:element name="grubosc" type="wymiarType" minOccurs="0"/>
+        </xsd:sequence>
+        <xsd:attribute name="jednostka" type="jednostkaType" default="cm"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="daneType">
+        <xsd:sequence>
+            <xsd:element name="tytul" type="tytulType"/>
+            <xsd:element name="autorzy" type="autorzyType"/>
+            <xsd:element name="data_wydania" type="data_wydaniaType"/>
+            <xsd:element name="strony" type="stronyType"/>
+            <xsd:element name="wymiary" type="wymiaryType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ksiazkaType">
+        <xsd:sequence>
+            <xsd:element name="dane" type="daneType"/>
+            <xsd:element name="opis" type="opisType" minOccurs="0"/>
+            <xsd:element name="cena" type="cenaType"/>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="idType" use="required"/>
+        <xsd:attribute name="jezyk" type="jezykAttributeType" use="required"/>
+        <xsd:attribute name="typ" type="typType" use="required"/>
+        <xsd:attribute name="okladka" type="okladkaType" use="optional"/>
+        <xsd:attribute name="kategoria" type="kategoriaAttributeType" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="kategorieType">
+        <xsd:sequence>
+            <xsd:element name="kategoria" type="kategoriaType" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="jezykiType">
+        <xsd:sequence>
+            <xsd:element name="jezyk" type="jezykType" maxOccurs="unbounded" minOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ksiazkiType">
+        <xsd:sequence>
+            <xsd:element name="ksiazka" type="ksiazkaType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ksiegarniaType">
+        <xsd:sequence>
+            <xsd:element name="ksiazki" type="ksiazkiType"/>
+            <xsd:element name="kategorie" type="kategorieType"/>
+            <xsd:element name="jezyki" type="jezykiType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="ksiegarnia" type="ksiegarniaType">
+        <xsd:key name="kategoriaKey">
+            <xsd:selector xpath=".//kategorie/kategoria"/>
+            <xsd:field xpath="@skrot"/>
+        </xsd:key>
+        <xsd:key name="jezykKey">
+            <xsd:selector xpath=".//jezyki/jezyk"/>
+            <xsd:field xpath="@skrot"/>
+        </xsd:key>
+        <xsd:keyref name="kategoriaRef" refer="kategoriaKey">
+            <xsd:selector xpath=".//ksiazki/ksiazka"/>
+            <xsd:field xpath="@kategoria"/>
+        </xsd:keyref>
+        <xsd:keyref name="jezykRef" refer="jezykKey">
+            <xsd:selector xpath=".//ksiazki/ksiazka"/>
+            <xsd:field xpath="@jezyk"/>
+        </xsd:keyref>
+    </xsd:element>
+
+</xsd:schema>

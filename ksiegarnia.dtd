@@ -1,0 +1,36 @@
+<!ELEMENT ksiegarnia (ksiazki, kategorie, jezyki)>
+
+<!ELEMENT ksiazki (ksiazka*)>
+<!ELEMENT kategorie (kategoria*)>
+<!ELEMENT jezyki (jezyk*)>
+
+<!ELEMENT ksiazka (dane, opis?, cena)>
+
+<!ELEMENT dane (tytul, autorzy, data_wydania, strony?, wymiary?)>
+<!ELEMENT tytul (#PCDATA)>
+<!ELEMENT autorzy (autor+)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT data_wydania (#PCDATA)>
+<!ELEMENT strony (#PCDATA)>
+<!ELEMENT wymiary (dlugosc?, szerokosc?, grubosc?)>
+<!ELEMENT dlugosc (#PCDATA)>
+<!ELEMENT szerokosc (#PCDATA)>
+<!ELEMENT grubosc (#PCDATA)>
+<!ELEMENT opis (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+
+<!ELEMENT kategoria (#PCDATA)>
+
+<!ELEMENT jezyk (#PCDATA)>
+
+<!ATTLIST ksiazka id ID #REQUIRED>
+<!ATTLIST ksiazka jezyk IDREF #REQUIRED>
+<!ATTLIST ksiazka typ (papierowa|ebook) "papierowa">
+<!ATTLIST ksiazka okladka (miękka|twarda) #IMPLIED>
+<!ATTLIST ksiazka kategoria IDREF #REQUIRED>
+<!ATTLIST wymiary jednostka CDATA "cm">
+<!ATTLIST cena waluta CDATA "zł">
+
+<!ATTLIST kategoria skrot ID #REQUIRED>
+
+<!ATTLIST jezyk skrot ID #REQUIRED>

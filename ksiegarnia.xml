@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ksiegarnia>
     <ksiazki>
-        <ksiazka id="k1" jezyk="pl" typ="papierowa" okladka="miekka" kategoria="kry">
+        <ksiazka id="k1" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
             <dane>
                 <tytul>Lot 202</tytul>
                 <autorzy>
