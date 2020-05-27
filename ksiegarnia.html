@@ -4,8 +4,46 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="ksiegarniaindex.css">
+
+    <script>
+        function loadXMLDoc(filename)
+        {
+            if (window.ActiveXObject)
+            {
+                xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            else
+            {
+                xhttp = new XMLHttpRequest();
+            }
+            xhttp.open("GET", filename, false);
+            try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
+            xhttp.send("");
+            return xhttp.responseXML;
+        }
+
+        function displayResult()
+        {
+            xml = loadXMLDoc("ksiegarnia.xml");
+            xsl = loadXMLDoc("ksiegarnia.xsl");
+// code for IE
+            if (window.ActiveXObject || xhttp.responseType == "msxml-document")
+            {
+                ex = xml.transformNode(xsl);
+                document.getElementById("content").innerHTML = ex;
+            }
+// code for Chrome, Firefox, Opera, etc.
+            else if (document.implementation && document.implementation.createDocument)
+            {
+                xsltProcessor = new XSLTProcessor();
+                xsltProcessor.importStylesheet(xsl);
+                resultDocument = xsltProcessor.transformToFragment(xml, document);
+                document.getElementById("content").appendChild(resultDocument);
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="displayResult()">
     <main>
         <aside class="menu">
             <button name="add">Dodaj...</button>
@@ -35,7 +73,7 @@
             </form>
         </div>
         </aside>
-        <input type="text" name="szukaj">
+        <input clas="searchBox" type="text" name="szukaj">
         <button name="wyszukaj">Wyszukaj</button>
         <select name="sortSelect">
             <option>Tytuł: alfabetycznie</option>
@@ -44,7 +82,7 @@
             <option>Data wydania: od najnowszego</option>
             <option>Data wydania: od najstarszego</option>
         </select>
-        <div class="content">
+        <div id="content">
 
         </div>
     </main>

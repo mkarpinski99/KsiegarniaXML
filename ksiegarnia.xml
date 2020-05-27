@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="ksiegarnia.xsl"?>
 <ksiegarnia>
     <ksiazki>
         <ksiazka id="k1" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
@@ -12,6 +13,7 @@
                 <wymiary jednostka="cm">
                     <dlugosc>20</dlugosc>
                     <szerokosc>13.5</szerokosc>
+                    <grubosc>13.5</grubosc>
                 </wymiary>
             </dane>
             <opis>Zwyczajna, piątkowa noc w Nowej Hucie. Kamery monitoringu u zbiegu dwóch ulic rejestrują młodego
@@ -21,6 +23,51 @@
                 premierem na pokładzie. Zwykły lot do Toronto ma potrwać dziewięć godzin i trzydzieści pięć minut.
                 Szybko okazuje się jednak, że najprawdopodobniej nigdy nie dotrze do celu… Rozpoczyna się
                 wyścig z czasem, a jedyną poszlaką jest chłopak, który niegdyś zaginął na krakowskich ulicach.</opis>
+            <cena waluta="zł">42.90</cena>
+        </ksiazka>
+        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Lot 202</tytul>
+                <autorzy>
+                    <autor>Mróz Remigiusz</autor>
+                </autorzy>
+                <data_wydania>2020-05-20</data_wydania>
+                <strony>512</strony>
+                <wymiary jednostka="cm">
+                    <dlugosc>20</dlugosc>
+                    <szerokosc>13.5</szerokosc>
+                </wymiary>
+            </dane>
+            <cena waluta="zł">42.90</cena>
+        </ksiazka>
+        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Lot 202</tytul>
+                <autorzy>
+                    <autor>Mróz Remigiusz</autor>
+                </autorzy>
+                <data_wydania>2020-05-20</data_wydania>
+                <strony>512</strony>
+                <wymiary jednostka="cm">
+                    <dlugosc>20</dlugosc>
+                    <szerokosc>13.5</szerokosc>
+                </wymiary>
+            </dane>
+            <cena waluta="zł">42.90</cena>
+        </ksiazka>
+        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Lot 202</tytul>
+                <autorzy>
+                    <autor>Mróz Remigiusz</autor>
+                </autorzy>
+                <data_wydania>2020-05-20</data_wydania>
+                <strony>512</strony>
+                <wymiary jednostka="cm">
+                    <dlugosc>20</dlugosc>
+                    <szerokosc>13.5</szerokosc>
+                </wymiary>
+            </dane>
             <cena waluta="zł">42.90</cena>
         </ksiazka>
     </ksiazki>

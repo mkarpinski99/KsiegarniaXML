@@ -10,10 +10,13 @@ aside {
     bottom: 0;
 }
 
-.content {
 
-    padding: 30px;
-    margin: 10px;
+#content {
+
+    padding: 0px 10px 10px 10px;
+    margin:  0px 10px 10px 0px;
+    overflow: scroll;
+    height: 95%;
 
 
 }

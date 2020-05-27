@@ -117,7 +117,7 @@
             <xsd:element name="autorzy" type="autorzyType"/>
             <xsd:element name="data_wydania" type="data_wydaniaType"/>
             <xsd:element name="strony" type="stronyType"/>
-            <xsd:element name="wymiary" type="wymiaryType"/>
+            <xsd:element name="wymiary" type="wymiaryType" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
 
