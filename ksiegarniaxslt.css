@@ -1,0 +1,115 @@
+.ksiazki {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ksiazka {
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid blue;
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightgray;
+}
+
+.ksiazka:hover {
+    transform: scale(1.01);
+    background-color: white;
+    border-color: crimson;
+}
+
+
+.bookPanel {
+    color: red;
+    border: 1px solid blue;
+    display: grid;
+    padding: 0;
+}
+
+.dane {
+    position: relative;
+    float: left;
+    top: 0;
+    bottom: 0;
+}
+.dane > *, .ksiazkaBox > * {
+    margin-bottom: 5px;
+}
+
+.jezyk {
+    margin-bottom: 20px;
+}
+
+.ksiazkaBox {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    width: 70%;
+}
+
+.wymiary {
+    display: flex;
+}
+
+
+.tytul {
+    margin-top: 10px;
+}
+
+.tytul::before {
+    content: "Tytuł: ";
+}
+
+.cena::before {
+    content: "Cena: ";
+}
+
+.typ::before {
+    content: "Rodzaj: ";
+}
+
+.okladka::before {
+    content: "Okładka: "
+}
+
+.kategoria::before {
+    content: "Kategoria: ";
+}
+
+.jezyk::before {
+    content: "Język: ";
+}
+
+.autorzy::before {
+    content: "Autorzy: ";
+}
+.data_wydania::before {
+    content: "Data wydania: ";
+}
+
+.strony::before {
+    content: "Liczba stron: ";
+}
+
+.wymiary::before {
+    content: "Wymiary: ";
+}
+
+.opis::before {
+    content: "Opis: ";
+}
+
+.dane::before {
+    content: "Dane szczegółowe: ";
+    border-bottom: 2px solid gray;
+}
+
+.szerokosc::before {
+    content: "x";
+}
+
+.grubosc::before {
+    content: "x";
+}
