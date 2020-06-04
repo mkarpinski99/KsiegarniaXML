@@ -25,56 +25,194 @@
                 wyścig z czasem, a jedyną poszlaką jest chłopak, który niegdyś zaginął na krakowskich ulicach.</opis>
             <cena waluta="zł">42.90</cena>
         </ksiazka>
-        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="fan">
             <dane>
-                <tytul>Lot 202</tytul>
+                <tytul>Ostatnie życzenie. Wiedźmin. Tom 1</tytul>
                 <autorzy>
-                    <autor>Mróz Remigiusz</autor>
+                    <autor>Sapkowski Andrzej</autor>
                 </autorzy>
-                <data_wydania>2020-05-20</data_wydania>
-                <strony>512</strony>
-                <wymiary jednostka="cm">
-                    <dlugosc>20</dlugosc>
-                    <szerokosc>13.5</szerokosc>
+                <data_wydania>2014-10-06</data_wydania>
+                <strony>332</strony>
+                <wymiary jednostka="mm">
+                    <dlugosc>195</dlugosc>
+                    <szerokosc>125</szerokosc>
+                    <grubosc>24</grubosc>
                 </wymiary>
             </dane>
-            <cena waluta="zł">42.90</cena>
+            <cena waluta="zł">33.20</cena>
         </ksiazka>
-        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+        <ksiazka id="k3" jezyk="pl" typ="papierowa" okladka="twarda" kategoria="fan">
             <dane>
-                <tytul>Lot 202</tytul>
+                <tytul>Miecz przeznaczenia. Wiedźmin. Tom 2 </tytul>
                 <autorzy>
-                    <autor>Mróz Remigiusz</autor>
+                    <autor>Sapkowski Andrzej</autor>
                 </autorzy>
-                <data_wydania>2020-05-20</data_wydania>
-                <strony>512</strony>
-                <wymiary jednostka="cm">
-                    <dlugosc>20</dlugosc>
-                    <szerokosc>13.5</szerokosc>
+                <data_wydania>2014-10-06</data_wydania>
+                <strony>400</strony>
+                <wymiary jednostka="mm">
+                    <dlugosc>195</dlugosc>
+                    <szerokosc>124</szerokosc>
+                    <grubosc>29</grubosc>
                 </wymiary>
             </dane>
-            <cena waluta="zł">42.90</cena>
+            <cena waluta="zł">33.20</cena>
         </ksiazka>
-        <ksiazka id="k2" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+        <ksiazka id="k4" jezyk="pl" typ="ebook" kategoria="kry">
             <dane>
-                <tytul>Lot 202</tytul>
+                <tytul>Czerwień. Kolory zła</tytul>
+                <autorzy>
+                    <autor>Sobczak Małgorzata Oliwia</autor>
+                </autorzy>
+                <data_wydania>2019-09-03</data_wydania>
+                <strony>260</strony>
+            </dane>
+            <opis>Przyglądał się ciału zafascynowany. To była najpiękniejsza zbrodnia, jaką widział. Dopuścić się jej mógł tylko prawdziwy psychopata. Takiego mordu nie wolno było zignorować. Wszystko wskazuje na to, że oprawca na swoją kolejną ofiarę czekał cierpliwie 17 lat. Dla prokuratora Bilskiego ta sprawa może nabrać jednak zbyt osobistego charakteru.</opis>
+            <cena waluta="zł">36.90</cena>
+        </ksiazka>
+        <ksiazka id="k5" jezyk="pl" typ="ebook" kategoria="lft">
+            <dane>
+                <tytul>Dlaczego nikt nie widzi, że umieram. Historie ofiar przemocy psychicznej</tytul>
+                <autorzy>
+                    <autor>Kim Renata</autor>
+                </autorzy>
+                <data_wydania>2020-04-22</data_wydania>
+                <strony>187</strony>
+            </dane>
+            <opis>
+                Przemoc psychiczna nie pozostawia po sobie zewnętrznych śladów, na ciele ofiar nie pojawiają się siniaki ani zadrapania, ale jej skutki bywają równie bolesne i niszczące. Przekonali się o tym bohaterki i bohaterzy reportażu Renaty Kim, którzy przez lata tkwili w toksycznych relacjach, na co dzień zmagając się z upokorzeniami zadawanymi im przez partnerów. Ich historie często zaczynają się jak zakończenia baśni, bo oto na ich drodze pojawił się ktoś, kto zdawał się być spełnieniem marzeń o znalezieniu swojej drugiej połowy, o wyśnionym ideale.
+            </opis>
+            <cena waluta="zł">26.90</cena>
+        </ksiazka>
+        <ksiazka id="k6" jezyk="pl" typ="papierowa" okladka="twarda" kategoria="bio">
+            <dane>
+                <tytul>Żony nazistów. Kobiety kochające zbrodniarzy</tytul>
+                <autorzy>
+                    <autor>Wyllie James</autor>
+                </autorzy>
+                <data_wydania>2020-05-20</data_wydania>
+                <strony>368</strony>
+                <wymiary jednostka="mm">
+                    <dlugosc>195</dlugosc>
+                    <szerokosc>124</szerokosc>
+                </wymiary>
+            </dane>
+            <opis>
+                Gdy świat cierpiał głód, one żyły w przepychu, wśród zrabowanych dzieł sztuki, niewolniczej służby, jedząc warzywa i owoce z ogrodów uprawianych przy obozach koncentracyjnych. Kochały, kłóciły się, rywalizowały o pozycję w oczach wielbionego Hitlera. Nieostrożne zachowanie kobiety mogło zniszczyć karierę i reputację męża w oczach nazistowskiej elity. Niemieckie żony stały u boku hitlerowskich zbrodniarzy, równie gorliwie jak oni wyznając nazistowską ideologię.
+            </opis>
+            <cena waluta="zł">29.49</cena>
+        </ksiazka>
+        <ksiazka id="k7" jezyk="en" typ="papierowa" okladka="miękka" kategoria="bio">
+            <dane>
+                <tytul>Elon Musk. How the Billionaire CEO of Spacex and Tesla is Shaping Our Future</tytul>
+                <autorzy>
+                    <autor>Vance Ashlee</autor>
+                </autorzy>
+                <data_wydania>2016-01-01</data_wydania>
+                <strony>392</strony>
+                <wymiary jednostka="mm">
+                    <dlugosc>177</dlugosc>
+                    <szerokosc>112</szerokosc>
+                    <grubosc>35</grubosc>
+                </wymiary>
+            </dane>
+            <opis>
+                South African born Elon Musk is the renowned entrepreneur and innovator behind PayPal, SpaceX, Tesla, and SolarCity. Musk wants to save our planet; he wants to send citizens into space, to form a colony on Mars; he wants to make money while doing these things; and he wants us all to know about it. He is the real-life inspiration for the Iron Man series of films starring Robert Downey Junior.            </opis>
+            <cena waluta="zł">29.49</cena>
+        </ksiazka>
+        <ksiazka id="k8" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="lft">
+            <dane>
+                <tytul>Tajne życie</tytul>
+                <autorzy>
+                    <autor>Fox Amaryllis</autor>
+                </autorzy>
+                <data_wydania>2020-06-03</data_wydania>
+                <strony>321</strony>
+            </dane>
+            <opis>
+            "Tajne życie" to nie tylko relacja z pierwszej linii frontu. To przede wszystkim wspomnienia kobiety, która musiała pogodzić narodziny córeczki z walką z terrorystami. Dojrzewająca w wywiadzie Fox stopniowo wyzbywała się kolejnych złudzeń – na temat przemocy, służby i wojny.
+            </opis>
+            <cena waluta="zł">25.99</cena>
+        </ksiazka>
+        <ksiazka id="k9" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="lft">
+            <dane>
+                <tytul>Na sygnale. Z życia ratownika medycznego</tytul>
+                <autorzy>
+                    <autor>Walder Lysa</autor>
+                </autorzy>
+                <data_wydania>2020-06-03</data_wydania>
+                <strony>301</strony>
+            </dane>
+            <opis>
+                Na chodniku leży nastolatek, wykrwawiający się z rany kłutej. Zrozpaczona i zszokowana matka patrzy oniemiała, jak jej córka przechodzi bardzo silny atak astmy. Młody mężczyzna rzuca się pod pociąg w Sylwestra o północy.
+
+                Niewielu ludzi wyobraża sobie życie w świecie, w którym takie sytuacje należą do codzienności.
+            </opis>
+            <cena waluta="zł">31.99</cena>
+        </ksiazka>
+        <ksiazka id="k10" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Dylemat</tytul>
+                <autorzy>
+                    <autor>Paris B.A.</autor>
+                </autorzy>
+                <data_wydania>2020-03-11</data_wydania>
+                <strony>352</strony>
+            </dane>
+            <cena waluta="zł">25.27</cena>
+        </ksiazka>
+        <ksiazka id="k11" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Przekręt</tytul>
+                <autorzy>
+                    <autor>Świst Paulina</autor>
+                </autorzy>
+                <data_wydania>2020-06-03</data_wydania>
+                <strony>401</strony>
+            </dane>
+            <opis>Gdzie jest granica chciwości? Nie ma jej? A może po prostu jej nie widać, kiedy oczy przesłania mgła pożądania? Kilka osób będzie musiało poważnie się nad tym zastanowić...</opis>
+            <cena waluta="zł">25.59</cena>
+        </ksiazka>
+        <ksiazka id="k12" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Ekstradycja</tytul>
                 <autorzy>
                     <autor>Mróz Remigiusz</autor>
                 </autorzy>
-                <data_wydania>2020-05-20</data_wydania>
-                <strony>512</strony>
-                <wymiary jednostka="cm">
-                    <dlugosc>20</dlugosc>
-                    <szerokosc>13.5</szerokosc>
-                </wymiary>
+                <data_wydania>2020-03-25</data_wydania>
+                <strony>498</strony>
             </dane>
-            <cena waluta="zł">42.90</cena>
+            <opis>Minęło kilka miesięcy, od kiedy Joanna Chyłka uciekła z kraju. Ślad po niej zaginął i mimo że wystawiono za nią Europejski Nakaz Aresztowania, służby nie potrafią odnaleźć żadnego tropu. Przez cały ten czas nie skontaktowała się z nikim w Polsce i nawet Kordian nie wierzy już w to, że Chyłka kiedykolwiek znajdzie sposób, by nawiązać z nim kontakt.</opis>
+            <cena waluta="zł">23.94</cena>
+        </ksiazka>
+        <ksiazka id="k12" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+            <dane>
+                <tytul>Głosy z zaświatów</tytul>
+                <autorzy>
+                    <autor>Mróz Remigiusz</autor>
+                </autorzy>
+                <data_wydania>2020-01-29</data_wydania>
+                <strony>448</strony>
+            </dane>
+            <opis>
+                "Głosy z zaświatów" to książka o ważnych i aktualnych tematach społecznych. Remigiusz Mróz w mistrzowskiej formie!
+
+                Tomasz Sekielski
+
+                Seweryn Zaorski stara się na nowo ułożyć sobie życie, kiedy do zakładu patomorfologii w Żeromicach zaczynają trafiać ciała małych dzieci z okolicy. Nikt nie potrafi rozwiązać zagadki śmierci młodych ofiar,
+
+                nic bowiem nie wskazuje na to, by zostały zamordowane. Seweryn jest jednak przekonany, że może stać się głosem tych, którzy mówią już jedynie z zaświatów.
+            </opis>
+            <cena waluta="zł">19.99</cena>
         </ksiazka>
     </ksiazki>
     <kategorie>
         <kategoria skrot="kry">kryminał</kategoria>
+        <kategoria skrot="fan">fantasy</kategoria>
+        <kategoria skrot="lft">lit. faktu</kategoria>
+        <kategoria skrot="bio">biografia</kategoria>
     </kategorie>
     <jezyki>
         <jezyk skrot="pl">polski</jezyk>
+        <jezyk skrot="en">angielski</jezyk>
     </jezyki>
 </ksiegarnia>

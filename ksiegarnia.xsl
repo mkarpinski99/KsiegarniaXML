@@ -85,11 +85,13 @@
                         </xsl:if>
                     </div>
                     <div class="cena">
+                        <xsl:variable name="waluta" select="cena/@waluta"/>
                         <xsl:value-of select="cena"/>
+                        <xsl:value-of select="$waluta"/>
                     </div>
                     <div class="bookPanel">
-                        <button onAction="bookDelete()">Usuń</button>
-                        <button onAction="bookUpdate()">Aktualizuj</button>
+                        <button onclick="removeBook(this)">Usuń</button>
+                        <button onclick="updateBook(this)">Aktualizuj</button>
                     </div>
                 </div>
             </xsl:for-each>

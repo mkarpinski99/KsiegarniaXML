@@ -4,83 +4,69 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="ksiegarniaindex.css">
-
-    <script>
-        function loadXMLDoc(filename)
-        {
-            if (window.ActiveXObject)
-            {
-                xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-            }
-            else
-            {
-                xhttp = new XMLHttpRequest();
-            }
-            xhttp.open("GET", filename, false);
-            try {xhttp.responseType = "msxml-document"} catch(err) {} // Helping IE11
-            xhttp.send("");
-            return xhttp.responseXML;
-        }
-
-        function displayResult()
-        {
-            xml = loadXMLDoc("ksiegarnia.xml");
-            xsl = loadXMLDoc("ksiegarnia.xsl");
-// code for IE
-            if (window.ActiveXObject || xhttp.responseType == "msxml-document")
-            {
-                ex = xml.transformNode(xsl);
-                document.getElementById("content").innerHTML = ex;
-            }
-// code for Chrome, Firefox, Opera, etc.
-            else if (document.implementation && document.implementation.createDocument)
-            {
-                xsltProcessor = new XSLTProcessor();
-                xsltProcessor.importStylesheet(xsl);
-                resultDocument = xsltProcessor.transformToFragment(xml, document);
-                document.getElementById("content").appendChild(resultDocument);
-            }
-        }
-    </script>
+    <script src="ksiegarnia.js"></script>
 </head>
 <body onload="displayResult()">
     <main>
         <aside class="menu">
-            <button name="add">Dodaj...</button>
-            <div class="add">
-            <form name="addMenu">
+            <button onclick="addBook()" name="add">Dodaj...</button>
+            <div class="addMenu">
                 <label for="tytul">Tytuł</label>
                 <input id="tytul" type="text" name="tytul">
-                <label>Autor</label>
-                <input type="text" name="autor">
+                <div id="autorzyForm" class="autorzyForm">
+                    <div>
+                        <label>Autor</label>
+                        <input type="text" name="autor">
+                    </div>
+                    <button onclick="addAutor()" id="addAutor">+</button>
+                </div>
                 <label>Kategoria</label>
-                <select name="kategoria">
-                    <option>kryminał</option>
+                <select id="kategoria" name="kategoria">
                 </select>
-                <button name="kategoriaAdd">Dodaj nową</button>
+                <label>Typ</label>
+                <select id="typ" name="typ">
+                    <option>papierowa</option>
+                    <option>ebook</option>
+                </select>
+                <label>Okladka</label>
+                <select id="okladka" name="okladka">
+                    <option>twarda</option>
+                    <option>miękka</option>
+                </select>
                 <label>Język</label>
-                <select name="jezyk">
-                    <option>polski</option>
+                <select id="jezyk" name="jezyk">
                 </select>
-                <button name="kategoriaAdd">Dodaj nowy</button>
                 <label>Data wydania</label>
-                <input type="date" name="data_wydania">
+                <input id="data_wydania" type="date" name="data_wydania">
                 <label>Strony</label>
-                <input type="number" name="strony">
+                <input id="strony" type="number" name="strony">
                 <label>Cena</label>
-                <input type="number" name="cena">
-                <button id="confirm" name="confirmAdd">Zatwierdź</button>
-            </form>
+                <input id="cena" type="number" name="cena">
+                <select id="waluta" name="waluta">
+                    <option>zł</option>
+                </select>
+                <label>Wymiary</label>
+                <input id="dlugosc" type="text" name="wymiary" placeholder="długość">
+                <input id="szerokosc" type="text" name="wymiary" placeholder="szerokość">
+                <input id="grubosc" type="text" name="wymiary" placeholder="grubość">
+                <select id="jednostka" name="jednostka">
+                    <option>cm</option>
+                </select>
+                <label>Opis</label>
+                <textarea id="opis" name="opis"></textarea>
         </div>
         </aside>
-        <input clas="searchBox" type="text" name="szukaj">
-        <button name="wyszukaj">Wyszukaj</button>
-        <select name="sortSelect">
-            <option>Tytuł: alfabetycznie</option>
-            <option>Cena: rosnąco</option>
-            <option>Cena: malejąco</option>
-            <option>Data wydania: od najnowszego</option>
-            <option>Data wydania: od najstarszego</option>
+        <input id="searchInput" class="searchBox" type="text" name="szukaj">
+        <button onclick="search()" name="wyszukaj">Wyszukaj</button>
+        <select id="typSelect" onchange="typFilter(this)" name="typSelect">
+            <option>wszystkie</option>
+            <option>papierowa</option>
+            <option>ebook</option>
+        </select>
+        <select id="okladkaSelect" onchange="okladkaFilter(this)" name="okladka">
+            <option>wszystkie</option>
+            <option>miękka</option>
+            <option>twarda</option>
         </select>
         <div id="content">
 

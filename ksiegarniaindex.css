@@ -10,6 +10,10 @@ aside {
     bottom: 0;
 }
 
+.addMenu textarea{
+    width: 100%;
+    max-width: 100%;
+}
 
 #content {
 
@@ -21,13 +25,13 @@ aside {
 
 }
 
-div.add{
+div.addMenu{
     border: 2px solid cadetblue;
     padding: 30px;
     margin: 10px;
 }
 
-div.add label{
+div.addMenu label{
     display: block;
     margin: 7px;
 }
