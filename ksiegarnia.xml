@@ -184,7 +184,7 @@
             <opis>Minęło kilka miesięcy, od kiedy Joanna Chyłka uciekła z kraju. Ślad po niej zaginął i mimo że wystawiono za nią Europejski Nakaz Aresztowania, służby nie potrafią odnaleźć żadnego tropu. Przez cały ten czas nie skontaktowała się z nikim w Polsce i nawet Kordian nie wierzy już w to, że Chyłka kiedykolwiek znajdzie sposób, by nawiązać z nim kontakt.</opis>
             <cena waluta="zł">23.94</cena>
         </ksiazka>
-        <ksiazka id="k12" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
+        <ksiazka id="k13" jezyk="pl" typ="papierowa" okladka="miękka" kategoria="kry">
             <dane>
                 <tytul>Głosy z zaświatów</tytul>
                 <autorzy>
